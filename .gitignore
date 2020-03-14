@@ -1,0 +1,6 @@
+input/*
+src
+notebooks/lightning_logs
+notebooks/*.bin
+notebooks/*.log
+notebooks/.ipynb_checkpoints
