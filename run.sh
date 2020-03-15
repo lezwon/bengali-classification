@@ -1,0 +1,28 @@
+export CUDA_VISIBILE_DEVICES=0
+IMG_HEIGHT=137
+IMG_WIDTH=236
+EPOCHS=50
+TRAIN_BATCH_SIZE=64
+TEST_BATCH_SIZE=8
+MODEL_MEAN="()"
+MODEL_STD=""
+
+TRAINING_FOLDS="(0, 1, 2, 3)"
+VALIDATION_FOLDS="(4, )"
+python train.py
+
+TRAINING_FOLDS="(0, 1, 2, 4)"
+VALIDATION_FOLDS="(3, )"
+python train.py
+
+TRAINING_FOLDS="(0, 1, 4, 3)"
+VALIDATION_FOLDS="(2, )"
+python train.py
+
+TRAINING_FOLDS="(0, 4, 2, 3)"
+VALIDATION_FOLDS="(1, )"
+python train.py
+
+TRAINING_FOLDS="(4, 1, 2, 3)"
+VALIDATION_FOLDS="(0, )"
+python train.py
